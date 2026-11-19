@@ -1,0 +1,13 @@
+<!-- Add inside the EXISTING ossec_config on Manager (if running on the EHR server),
+     or agent. Do not replace the whole ossec.conf. Test file permissions first. -->
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/lib/hicp-ehr/audit.jsonl</location>
+</localfile>
+
+<!-- Cảnh báo Suricata (EVE JSON). Nếu Suricata chạy trên pfSense HQ: bật Services > Suricata > Interface > "EVE JSON Log"
+     hoặc gửi syslog về Wazuh (remote syslog UDP 514) rồi bỏ comment khối <remote> trong ossec.conf của Manager. -->
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/suricata/eve.json</location>
+</localfile>

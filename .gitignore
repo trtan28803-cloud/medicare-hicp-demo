@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+graphify-out/
+data/
+*.db
+audit.jsonl
+.env
+learning-path/
